@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_products_invetories",
+  "info": {
+    "name": "invetory",
+    "icon": "file-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl",
+        "xxl",
+        "xxxl"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "black",
+        "white",
+        "blue",
+        "red",
+        "purple"
+      ]
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "Orders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subtotal": {
+      "type": "biginteger",
+      "required": true
+    },
+    "discount": {
+      "type": "integer",
+      "required": true
+    },
+    "total": {
+      "type": "integer",
+      "required": true
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "accepted",
+        "sent",
+        "delivered"
+      ],
+      "default": "pending",
+      "required": false
+    },
+    "products": {
+      "collection": "products"
+    },
+    "pay_check": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "pay_method": {
+      "model": "pay-methods"
+    }
+  }
+}
